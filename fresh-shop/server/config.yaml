@@ -198,3 +198,8 @@ zap:
   max-age: 0
   show-line: true
   log-in-console: true
+
+wechat:
+  appid: ''
+  secret: ''
+  randomPassword: '' # 微信注册的用户初始密码
