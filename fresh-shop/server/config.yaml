@@ -52,21 +52,21 @@ cors:
         Content-Type
       allow-credentials: true
 db-list:
-  - disable: true
-    type: ""
-    alias-name: ""
-    path: ""
-    port: ""
-    config: ""
-    db-name: ""
-    username: ""
-    password: ""
+  - disable: false
+    type: "mysql"
+    alias-name: "freshShopMysql"
+    path: "fungs.cn"
+    port: "3306"
+    config: "charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
+    db-name: "fresh-shop"
+    username: "fresh-shop"
+    password: "eLhGCTg5wWLchb"
     prefix: ""
     singular: false
     engine: ""
     max-idle-conns: 10
     max-open-conns: 100
-    log-mode: ""
+    log-mode: "Warn"
     log-zap: false
 email:
   to: xxx@qq.com
@@ -107,18 +107,18 @@ mssql:
   log-mode: ""
   log-zap: false
 mysql:
-  path: 127.0.0.1
+  path: fungs.cn
   port: "3306"
   config: charset=utf8mb4&parseTime=True&loc=Local
   db-name: fresh-shop
   username: fresh-shop
-  password: eLshGCsTg5scwWLcshb
+  password: eLhGCTg5wWLchb
   prefix: ""
   singular: false
   engine: ""
   max-idle-conns: 10
   max-open-conns: 100
-  log-mode: error
+  log-mode: Info
   log-zap: false
 oracle:
   path: ""
@@ -162,7 +162,7 @@ redis:
   password: ""
 system:
   env: public
-  addr: 8888
+  addr: 48888
   db-type: mysql
   oss-type: local
   use-multipoint: false
@@ -200,6 +200,14 @@ zap:
   log-in-console: true
 
 wechat:
-  appid: ''
-  secret: ''
-  randomPassword: '' # 微信注册的用户初始密码
+  appid: 'wxdd9fa969ce0103ce'
+  secret: 'bf16534a42409e4c46ecb4c1ec64b29d'
+  randomPassword: 'baHVfhZDsQc9yh' # 微信注册的用户初始密码
+
+wechatPay:
+  mchId: '1641513718' # 商户号
+  apiV2Key: 'HC7saiqiuqiyundongku13527326320Q'
+  notifyUrl: 'https://qiyun.fungs.cn/api/wechat/pay/notify'
+  certPath: '' # 证书
+  keyPath: '' # 秘钥
+  debug: true
